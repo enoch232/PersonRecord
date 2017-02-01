@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var AgeLabel: UILabel!
     @IBOutlet weak var notificationLabel: UILabel!
     var record:recordDictionary = recordDictionary()
+    var recordCounter:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -79,8 +80,38 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func PreviousRecord(_ sender: UIBarButtonItem) {
+        if recordCounter == 0 {
+            self.notificationLabel.text = "Showing the first record."
+        }else{
+            recordCounter -= 1
+            if let foundRecord = record.viewRecord(page: recordCounter){
+                self.SSNLabel.text = "\(foundRecord.ssn!)"
+                self.NameLabel.text = foundRecord.name
+                self.AgeLabel.text = "\(foundRecord.age!)"
+                self.notificationLabel.text = "person \(recordCounter)"
+            }else{
+                
+            }
+
+        }
     }
     @IBAction func NextRecord(_ sender: UIBarButtonItem) {
+        if recordCounter == record.count() {
+            self.notificationLabel.text = "No more records."
+        }else{
+            recordCounter += 1
+            if let foundRecord = record.viewRecord(page: recordCounter){
+                self.SSNLabel.text = "\(foundRecord.ssn!)"
+                self.NameLabel.text = foundRecord.name
+                self.AgeLabel.text = "\(foundRecord.age!)"
+                self.notificationLabel.text = "person \(recordCounter)"
+
+            }else{
+                
+            }
+
+            
+        }
     }
 
 

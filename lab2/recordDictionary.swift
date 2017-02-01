@@ -13,9 +13,13 @@ class recordDictionary {
     
     
     func addRecord(record:personRecord) {
-        print("adding" + record.name!)
+        print("adding " + record.name!)
         infoRepository[record.ssn!] = record
         
+    }
+    
+    func count() -> Int {
+        return infoRepository.count
     }
     
     func searchRecord(ssn:Int64) -> personRecord? {
@@ -33,6 +37,20 @@ class recordDictionary {
             
             return nil
         }
+    }
+    
+    func viewRecord(page:Int) -> personRecord? {
+        var counter:Int = 0
+        for (eachSSN, _) in infoRepository {
+            counter += 1
+            if counter == page {
+//                print("count")
+                return infoRepository[eachSSN]
+            }
+            
+        }
+        return nil
+        
     }
     
     func deleteRecord(ssn:Int64) {
