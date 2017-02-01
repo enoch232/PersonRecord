@@ -12,6 +12,8 @@
 		7B28D41A1E41B353003B44AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B28D4181E41B353003B44AB /* Main.storyboard */; };
 		7B28D41C1E41B353003B44AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B28D41B1E41B353003B44AB /* Assets.xcassets */; };
 		7B28D41F1E41B353003B44AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B28D41D1E41B353003B44AB /* LaunchScreen.storyboard */; };
+		7B28D4271E4250AB003B44AB /* recordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28D4261E4250AB003B44AB /* recordDictionary.swift */; };
+		7B28D4291E4250CD003B44AB /* personRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B28D4281E4250CD003B44AB /* personRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7B28D41B1E41B353003B44AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B28D41E1E41B353003B44AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B28D4201E41B353003B44AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B28D4261E4250AB003B44AB /* recordDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordDictionary.swift; sourceTree = "<group>"; };
+		7B28D4281E4250CD003B44AB /* personRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				7B28D41B1E41B353003B44AB /* Assets.xcassets */,
 				7B28D41D1E41B353003B44AB /* LaunchScreen.storyboard */,
 				7B28D4201E41B353003B44AB /* Info.plist */,
+				7B28D4261E4250AB003B44AB /* recordDictionary.swift */,
+				7B28D4281E4250CD003B44AB /* personRecord.swift */,
 			);
 			path = lab2;
 			sourceTree = "<group>";
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B28D4271E4250AB003B44AB /* recordDictionary.swift in Sources */,
 				7B28D4171E41B353003B44AB /* ViewController.swift in Sources */,
 				7B28D4151E41B353003B44AB /* AppDelegate.swift in Sources */,
+				7B28D4291E4250CD003B44AB /* personRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
