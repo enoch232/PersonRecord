@@ -31,13 +31,11 @@ class ViewController: UIViewController {
         if let ssn = self.SSNTextField.text, !ssn.isEmpty {
             if let name = self.NameTextField.text, !name.isEmpty{
                 if let age = self.AgeTextField.text, !age.isEmpty{
-//                    self.SSNLabel.text = ssn
-//                    self.NameLabel.text = name
-//                    self.AgeLabel.text = age
-                    
                     let newPersonRecord =  personRecord(name: name, ssn: Int64(ssn)!, age: Int16(age)!)
                     record.addRecord(record: newPersonRecord)
-                    
+                    self.SSNTextField.text = ""
+                    self.NameTextField.text = ""
+                    self.AgeTextField.text = ""
                     self.notificationLabel.text = "You successfully added a record!"
                 }else{
                     self.notificationLabel.text = "You need to provide age."
@@ -56,6 +54,7 @@ class ViewController: UIViewController {
             self.SSNLabel.text = ""
             self.NameLabel.text = ""
             self.AgeLabel.text = ""
+            self.SSNTextField.text = ""
         }else{
             self.notificationLabel.text = "You need to provide ssn to delete a record."
         }
@@ -69,8 +68,10 @@ class ViewController: UIViewController {
                 self.NameLabel.text = foundRecord.name
                 self.AgeLabel.text = "\(foundRecord.age!)"
                 self.notificationLabel.text = "Found a record!"
+                self.SSNTextField.text = ""
             } else {
                 self.notificationLabel.text = "There is no record with that SSN!"
+                self.SSNTextField.text = ""
             }
 
         } else {
