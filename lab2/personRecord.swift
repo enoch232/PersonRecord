@@ -7,16 +7,15 @@
 //
 
 import Foundation
-class personRecord
-{
+class personRecord {
     var name:String? = nil
     var ssn:Int64? = nil
     var age:Int16? = nil
     
-    init(n:String, s:Int64, a:Int16) {
-        name = n
-        ssn = s
-        age = a
+    init(name:String, ssn:Int64, age:Int16) {
+        self.name = name
+        self.ssn = ssn
+        self.age = age
     }
     
 }

@@ -7,42 +7,36 @@
 //
 
 import Foundation
-class recordDictionary
-{
+class recordDictionary {
     var infoRepository : [Int64:personRecord] = [Int64:personRecord] ()
     init() { }
     
     
-    func add(p:personRecord)
-    {
-        print("adding" + p.name!)
-        infoRepository[p.ssn!] = p
+    func addRecord(record:personRecord) {
+        print("adding" + record.name!)
+        infoRepository[record.ssn!] = record
         
     }
     
-    func search(s:Int64) -> personRecord?
-    {
+    func searchRecord(ssn:Int64) -> personRecord? {
         var found = false
         
-        for (ssn, _) in infoRepository
-        {
-            if ssn == s {
+        for (eachSSN, _) in infoRepository {
+            if eachSSN == ssn {
                 found = true
                 break
             }
         }
-        if found
-        {
-            return infoRepository[s]
-        }else  {
+        if found {
+            return infoRepository[ssn]
+        } else {
             
             return nil
         }
     }
     
-    func deleteRec(s:Int64)
-    {
-        infoRepository[s] = nil
+    func deleteRecord(ssn:Int64) {
+        infoRepository[ssn] = nil
         
     }
 }
