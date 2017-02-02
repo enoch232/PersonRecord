@@ -41,15 +41,22 @@ class recordDictionary {
     
     func viewRecord(page:Int) -> personRecord? {
         var counter:Int = 0
+        var exist:Bool = false
+        var saveSSN:Int64?
         for (eachSSN, _) in infoRepository {
             counter += 1
             if counter == page {
-//                print("count")
-                return infoRepository[eachSSN]
+                exist = true
+                saveSSN = eachSSN
             }
             
         }
-        return nil
+        if exist {
+            return infoRepository[saveSSN!]
+        }else{
+            return nil
+
+        }
         
     }
     

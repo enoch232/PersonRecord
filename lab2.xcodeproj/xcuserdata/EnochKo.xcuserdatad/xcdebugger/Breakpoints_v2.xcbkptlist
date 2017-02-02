@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lab2/recordDictionary.swift"
-            timestampString = "507668250.516524"
+            timestampString = "507688612.410193"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "viewRecord(page:)"
             landmarkType = "7">
          </BreakpointContent>
