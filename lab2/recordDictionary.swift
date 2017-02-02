@@ -18,6 +18,10 @@ class recordDictionary {
         
     }
     
+    func editRecord(record:personRecord){
+        infoRepository[record.ssn!] = record
+    }
+    
     func count() -> Int {
         return infoRepository.count
     }
